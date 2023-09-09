@@ -1,0 +1,51 @@
+@import "../global";
+
+.chats__section {
+    padding: 5rem 2% 5rem 10%;
+    .container {
+        display: flex;
+        gap: 3rem;
+        align-items:center;
+        .chats__info {
+           @include chatsInfo;
+        }
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .chats__section {
+        .container {
+            flex-direction: column-reverse ;
+            .chats__info {
+                @include chatsInfoTablet
+            }
+            .chats__img {
+                width: 100%;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .chats__section {
+        padding: 5rem 0% 5rem 5%;
+        .container {
+            flex-direction: column-reverse ;
+            .chats__info {
+                @include chatsInfo;
+                width: 100%;
+            }
+            .chats__img {
+                overflow: hidden;
+                img {
+                    width: 1000px;
+                }
+            }
+        }
+    }
+}
+

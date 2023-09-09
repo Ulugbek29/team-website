@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  list-style: none;
+}
+
+// Colors
+$primary: #232340;
+$secondary: #5468e7;
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  padding: 5rem 10%;
+}
+
+footer {
+    padding: 5rem 10% 2rem 10%;
+}
+
+@mixin logo {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #fff;
+    .dot {
+        color: $secondary;
+        border-radius: 50%;
+    }
+}
+
+@mixin btn {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.2rem;
+  background: $secondary;
+  color: #fff;
+  white-space: nowrap;
+}
+
+@mixin chatsInfo {
+    width: 50%;
+    .title {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: $primary;
+    }
+    .section__text {
+        width: 80%;
+        color: $primary;
+        font-size: 1rem;
+        line-height: 1.4;
+        margin: 1rem 0 3rem 0;
+    }
+    a {
+        color: $secondary;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+}
+
+
+@mixin chatsInfoTablet {
+    width: 100%;
+    .title {
+        font-size: 4rem;
+        font-weight: 600;
+        color: $primary;
+    }
+    .section__text {
+        color: $primary;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        margin: 1rem 0 3rem 0;
+    }
+    a {
+        color: $secondary;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+}
+
+
+

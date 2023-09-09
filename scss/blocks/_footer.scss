@@ -1,0 +1,112 @@
+@import "../global";
+
+footer {
+  width: 100%;
+  background: $primary;
+  .footer__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    .logo {
+      @include logo;
+    }
+    .footer__links {
+      display: flex;
+      align-items: flex-start;
+      gap: 4rem;
+      .f__links {
+        display: flex;
+        gap: 4rem;
+      }
+      .footer__link {
+        h2 {
+          color: $secondary;
+        }
+
+        ul {
+          li {
+            margin: 1rem 0;
+            a {
+              text-decoration: none;
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      .subscribe__form {
+        form {
+            h2 {
+                color: $secondary;
+                margin-bottom: 1rem;
+            }
+            p {
+                color: #fff;
+                font-size: 0.8rem;
+                margin-bottom: 0.5rem;
+            }
+            .email__input {
+                width: 100%;
+                position: relative;
+                input {
+                    padding: 0.8rem 1rem 0.8rem 1rem;
+                    font-size: 1rem;
+                    background: #F5F5F53D;
+                    color: #fff;
+                    border: none;
+                    &::placeholder {
+                        color: #fff;
+                    }
+                }
+                i {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 5%;
+                    color: #Fff;
+                }
+            }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    margin-top: 5rem;
+    color: #fff;
+  }
+}
+
+
+@media screen and (max-width: 840px) { 
+    footer {
+        .footer__row {
+            flex-direction: column;
+            gap: 5rem;
+
+            .footer__links {
+                width: 100%;
+                gap: 2rem;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 430px) { 
+    footer {
+        .footer__row {
+            flex-direction: column;
+            gap: 5rem;
+
+            .footer__links {
+                gap: 2rem;
+                flex-direction: column-reverse;
+
+                .f__links {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

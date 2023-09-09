@@ -1,0 +1,86 @@
+@import "../global";
+
+.hero__section {
+    width: 100%;
+    height: 100vh;
+    padding: 5rem 10% 0 10%;
+    background: url(../../images/hero-back.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .hero__info {
+            width: 50%;
+            color: #fff;
+            .hero__title {
+                font-size: 3.5rem;
+            }
+            p {
+                width: 80%;
+                font-size: 1.3rem;
+                line-height: 1.4;
+                margin: 1rem 0 3rem 0;
+            }
+
+            .email__form {
+                width: 100%;
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                .email__input {
+                    width: 100%;
+                    position: relative;
+                    .email {
+                        width: 100%;
+                        font-size: 1rem;
+                        padding: 0.8rem 2rem 0.8rem 1rem;
+                        border: 0.2rem;
+                    }
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 5%;
+                        font-size: 1.5rem;
+                        color: #7676B2;
+                    }
+                }
+
+                .btn {
+                    @include btn
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .hero__section {
+      .container {
+          .hero__info {
+              width: 90%;
+          }
+      }  
+    }
+}
+
+@media screen and (max-width: 430px) {
+        .hero__section {
+            .container {
+                .hero__info {
+                    width: 100%;
+                    p {
+                        width: 100%;
+                    }
+                    .email__form {
+                        flex-direction: column;
+                        .btn {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+}
